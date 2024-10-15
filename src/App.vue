@@ -1,18 +1,23 @@
 <script>
-import AppProject from './components/AppProject.vue';
 import AppHeader from './components/AppHeader.vue';
+import {store} from './store.js';
+import {router} from './router.js';
 export default {
   components:{
-    AppProject,
     AppHeader
+  },
+  data () {
+    return {
+      store
+    }
   }
 }
 </script>
 
 <template lang="">
   <div>
-    <AppHeader />
-    <AppProject />
+    <AppHeader :menu="store.menuItems" />
+    <router-view></router-view>
   </div>
 </template>
 
