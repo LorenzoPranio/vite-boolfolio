@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 export const store = reactive({
     menuItems: [{
-        name: 'Homepage',
+        name: 'homepage',
         label: 'Homepage'
     },
     {
